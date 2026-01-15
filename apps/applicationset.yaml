@@ -19,8 +19,14 @@ spec:
       project: default
       source:
         repoURL: https://github.com/semever24/argocd-applicationset-controller.git
-        targetRevision: HEAD
+        targetRevision: master
         path: sock-shop
       destination:
         server: '{{.url}}'
         namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
