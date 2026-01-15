@@ -9,9 +9,9 @@ spec:
   - list:
       elements:
       - cluster: mumbai
-        url: https://71E1C3A4774230A924C9869C5A5F82EE.gr7.ap-south-1.eks.amazonaws.com
+        url: # mumbai-cluster-url
       - cluster: us
-        url: https://683E2FFAC9FAD3E68E95D5C5EAE6F35C.gr7.us-east-1.eks.amazonaws.com
+        url: # us-cluster-url
   template:
     metadata:
       name: '{{.cluster}}-sock-shop'
